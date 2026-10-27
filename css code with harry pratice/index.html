@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d1117">
+    <title>Sign up for GitHub</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #0d1117;
+            color: #f0f6fc;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 48px 20px 32px;
+        }
+
+        .brand {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 32px;
+            color: #f0f6fc;
+        }
+
+        .brand svg {
+            width: 48px;
+            height: 48px;
+            fill: currentColor;
+        }
+
+        h1 {
+            margin: 0 0 24px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+        }
+
+        .signup-card {
+            width: min(100%, 340px);
+            margin: 0 auto;
+            padding: 24px;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            background: #161b22;
+        }
+
+        .field {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            min-height: 34px;
+            padding: 5px 12px;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            background: #0d1117;
+            color: #f0f6fc;
+            font: inherit;
+        }
+
+        input:focus {
+            border-color: #1f6feb;
+            outline: 2px solid #1f6feb;
+            outline-offset: -1px;
+        }
+
+        .hint {
+            margin: 8px 0 0;
+            color: #8b949e;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        button {
+            width: 100%;
+            min-height: 38px;
+            margin-top: 4px;
+            padding: 8px 16px;
+            border: 1px solid #2ea043;
+            border-radius: 6px;
+            background: #238636;
+            color: #fff;
+            font: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2ea043;
+        }
+
+        .signin {
+            width: min(100%, 340px);
+            margin: 16px auto 0;
+            padding: 16px;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        a {
+            color: #2f81f7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin: 64px auto 0;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #8b949e;
+        }
+
+        @media (max-width: 420px) {
+            body {
+                padding: 32px 16px 24px;
+            }
+
+            .signup-card {
+                padding: 20px;
+            }
+
+            .footer {
+                gap: 12px;
+                margin-top: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="brand" aria-label="GitHub">
+        <svg viewBox="0 0 16 16" role="img" aria-label="GitHub">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38l-.01-1.49c-2.23.48-2.7-.95-2.7-.95-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.22.82 1.22.82.72 1.23 1.89.87 2.35.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.96 0-.88.31-1.6.82-2.16-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 4.32c.68 0 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.16 0 3.08-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.19c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path>
+        </svg>
+    </header>
+
+    <main>
+        <h1>Create your account</h1>
+        <form class="signup-card">
+            <div class="field">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+                <p class="hint">Make sure it's at least 8 characters.</p>
+            </div>
+
+            <div class="field">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" autocomplete="username" minlength="1" required>
+                <p class="hint">Your username can contain alphanumeric characters or single hyphens.</p>
+            </div>
+
+            <div class="field">
+                <label for="country">Your country or region</label>
+                <input id="country" name="country" type="text" autocomplete="country-name" required>
+            </div>
+
+            <button type="submit">Create account</button>
+        </form>
+
+        <p class="signin">Already have an account? <a href="#">Sign in</a></p>
+    </main>
+
+    <footer class="footer">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Docs</a>
+        <a href="#">Contact GitHub Support</a>
+    </footer>
+</body>
+</html>
